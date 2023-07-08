@@ -11,4 +11,13 @@ mission plannerのモーター認識A-Dと、マルチコプターとしての�
 
 # tuning
 パラメータリストのうち、フルパラメータツリーだとグルーピングされていてわかりやすい
-たぶん普段使うやつはスタンダードパラメータでよさそう
+普段使うやつはスタンダードパラメータでよさそう
+
+# lua script
+飛行制御に影響を及ぼさず、ArduPilotへの機能追加をするときに使える
+パラメータのSCR_ENABLEを1にして使うようにする
+STABLIZE> param show SCR_ENABLEなど、例の画面で変更できるようになる
+パラメータを変更した場合、再起動が必要
+sim_vehicle.pyを動かすディレクトリの下に/scriptsフォルダを作成し、そこにlua scriptを作成する
+mission plannerなら、設定→mavftpで設定する
+.(dot)はluaのライブラリ、:(colon)はardupilotのライブラリ呼び出しを行っている
