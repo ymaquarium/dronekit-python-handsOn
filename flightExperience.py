@@ -37,10 +37,10 @@ cmds.clear()
 
 #Define mission
 ##cmd1 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_TAKEOFF, 0,0,0,0,0,0,35.877272, 140.336378,10)
-cmd2 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0,0,0,0,0,0,35.877502, 140.336378,10)
-cmd3 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0,0,0,0,0,0,35.877272, 140.336638,10)
-cmd4 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0,0,0,0,0,0,35.877272, 140.336378,10)
-cmd5 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_LAND, 0,0,0,0,0,0,35.877272, 140.336378,0)
+cmd2 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0,0,0,0,0,0,35.87889456912811, 140.33935282716024,10)
+cmd3 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0,0,0,0,0,0,35.87888424604674, 140.33965994007255,10)
+cmd4 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_WAYPOINT, 0,0,0,0,0,0,35.87906858545532, 140.339318291779,10)
+cmd5 = Command(0,0,0, mavutil.mavlink.MAV_FRAME_GLOBAL_RELATIVE_ALT, mavutil.mavlink.MAV_CMD_NAV_LAND, 0,0,0,0,0,0,35.87906858545532, 140.339318291779,0)
 
 ##cmds.add(cmd1)
 cmds.add(cmd2)
@@ -58,10 +58,9 @@ vehicle.wait_for_mode("AUTO")
 
 #Notify mission complete
 cmdnext = 0
-while True:
-    if cmdnext - cmds.next == 3:
-        break
-    print("commands.next :%s"%cmds.next)
+while cmdnext - cmds.next != 3:
+    if cmdnext != cmds.next:
+        print("commands.next :%s"%cmds.next)
     cmdnext = cmds.next
     time.sleep(1)
 
