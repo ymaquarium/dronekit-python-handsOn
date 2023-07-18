@@ -14,7 +14,7 @@
 # 環境構築手順
 ## ArduPilotソースコードのクローン
 ホームディレクトリに、GitHubのArduPilotリポジトリよりソースコードをクローン。  
-`cd `    
+```cd ```    
 `git clone https://github.com/ArduPilot/ardupilot.git`    
   
 Ubuntuにてビルド環境をセットアップ    
