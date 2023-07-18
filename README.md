@@ -36,5 +36,6 @@ Ubuntuにてビルド環境をセットアップ
 ホームディレクトリにて、以下のコマンドを実行。  
 `mavproxy.py --master=udp:DRONE-IP-ADDRESS:14550 --out=127.0.0.1:14551`  
 <br>
-別のターミナルタブを開き、以下のコマンドを実行。  ！！ドローンが飛行開始するため注意！！  
+別のターミナルタブを開き、以下のコマンドを実行。  
+！！ドローンが飛行開始するため注意！！  
 `python3 /dronekit-python-handsOn/flightExperience.py`  
