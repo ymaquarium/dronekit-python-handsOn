@@ -5,7 +5,7 @@ import time
 #connect
 print("------Establishing Connection...------ ")
 print("...")
-vehicle = connect("tcp:127.0.0.1:5762", wait_ready=True, timeout=60)
+vehicle = connect("127.0.0.1:14552", wait_ready=True, timeout=60)
 cmds = vehicle.commands
 print("\n------Connected!------\n")
 time.sleep(2)
