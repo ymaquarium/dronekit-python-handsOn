@@ -38,4 +38,4 @@ Ubuntuにてビルド環境をセットアップ
 <br>
 別のターミナルタブを開き、以下のコマンドを実行。  
 ！！ドローンが飛行開始するため注意！！  
-`python3 /dronekit-python-handsOn/flightExperience.py`  
+`python3 ./dronekit-python-handsOn/flightExperience.py`  
