@@ -14,7 +14,7 @@
 # 環境構築手順
 ## ArduPilotソースコードのクローン
 ホームディレクトリに、GitHubのArduPilotリポジトリよりソースコードをクローン。  
-```cd ```    
+`cd `    
 `git clone https://github.com/ArduPilot/ardupilot.git`    
   
 Ubuntuにてビルド環境をセットアップ    
@@ -35,5 +35,6 @@ Ubuntuにてビルド環境をセットアップ
 機体とPCをWi-Fi接続させ、Wi-Fiプロパティから機体のIPアドレスを取得。    
 ホームディレクトリにて、以下のコマンドを実行。  
 `mavproxy.py --master=udp:DRONE-IP-ADDRESS:14550 --out=127.0.0.1:14551`  
-別のターミナルタブを開き、以下のコマンドを実行。！！ドローンが飛行開始するため注意！！  
+<br>
+別のターミナルタブを開き、以下のコマンドを実行。  ！！ドローンが飛行開始するため注意！！  
 `python3 /dronekit-python-handsOn/flightExperience.py`  
